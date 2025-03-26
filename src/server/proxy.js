@@ -7,7 +7,7 @@ const port = 3000;
 
 // Enable CORS for your frontend origin
 app.use(cors({
-  origin: 'http://localhost:8080'
+  origin: 'https://pyq-ai.onrender.com'
 }));
 
 app.use(express.json());
