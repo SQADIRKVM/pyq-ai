@@ -6,11 +6,8 @@ const app = express();
 const port = 3000;
 
 // Enable CORS for your frontend origin
-app.use(cors({
-  origin: ['https://pyq-ai.onrender.com', 'https://pyq-ai-1.onrender.com'], // Allow both URLs
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-DeepSeek-API-Key']
-}));
+app.use(cors({ origin: "*", methods: "GET,HEAD,PUT,PATCH,POST,DELETE" }));
+
 
 
 app.use(express.json());
