@@ -29,5 +29,5 @@ app.post("/api/deepseek", (req, res) => {
   res.json({ message: "DeepSeek API working!" });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
