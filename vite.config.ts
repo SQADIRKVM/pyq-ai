@@ -8,11 +8,19 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: mode === "development"
+      ? {
+          "/api": {
+            target: "https://pyq-ai.onrender.com", // Replace with your actual Render API URL
+            changeOrigin: true,
+            secure: false,
+          },
+        }
+      : undefined,
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
