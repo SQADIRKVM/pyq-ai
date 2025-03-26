@@ -6,9 +6,9 @@ const app = express();
 const port = 3000;
 
 // Enable CORS for your frontend origin
-app.use(cors({ origin: "*", methods: "GET,HEAD,PUT,PATCH,POST,DELETE" }));
-
-
+app.use(cors({
+  origin: 'http://localhost:8080'
+}));
 
 app.use(express.json());
 
